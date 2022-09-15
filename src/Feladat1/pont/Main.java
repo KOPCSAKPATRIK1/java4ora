@@ -1,4 +1,4 @@
-package Feladat1;
+package Feladat1.pont;
 
 import Feladat1.pont.Pont;
 
