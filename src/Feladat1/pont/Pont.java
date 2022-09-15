@@ -32,6 +32,35 @@ public class Pont
         return  Math.sqrt(Math.pow(this.X, 2) + Math.pow(this.Y, 2));
     }
 
+    public double ketPontTavolsaga(Pont p1)
+    {
+        return Math.sqrt(Math.pow(p1.X - this.X, 2) + Math.pow(p1.Y - this.Y, 2));
+    }
+
+    public int onePont()
+    {
+        if (this.Y > 0 && this.X > 0)
+        {
+            return 4;
+        }
+        else if (this.Y > 0 && this.X < 0)
+        {
+            return 1;
+        }
+        else if (this.Y < 0 && this.X < 0 )
+        {
+            return 2;
+        }
+        else if (this.Y < 0 && this.X > 0 )
+        {
+            return 3;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
     @Override
     public String toString() {return String.format("(%d, %d)", this.X, this.Y);}
 }
